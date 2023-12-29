@@ -35,6 +35,7 @@ function createBoxes(amount) {
       item.style.backgroundColor = getRandomHexColor();
     }
   }
+  num.value = "";
 }
 
 btnDestroy.addEventListener("click", destroyBoxes);
