@@ -25,14 +25,6 @@ const images = [
   },
 ];
 
-const urls = images.map((image) => {
-  return image.url;
-});
-
-const alts = images.map((image) => {
-  return image.alt;
-});
-
 const imgListElem = document.querySelector(".gallery");
 function imgTamplate(img) {
   return `<li class="gallery-item-js"><img src="${img.url}" alt="${img.alt}" /></li>`;
