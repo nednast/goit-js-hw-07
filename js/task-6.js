@@ -21,6 +21,9 @@ function createBoxes(amount) {
   let hig = 30;
   let a = 1;
   destroyBoxes();
+
+  const fragment = document.createDocumentFragment();
+
   if (amount >= 1 && amount <= 100) {
     for (let i = 0; i < amount; i++) {
       if (i > 0) {
@@ -33,9 +36,11 @@ function createBoxes(amount) {
       item.style.height = hig + "px";
       item.textContent = a;
       item.style.textAlign = "center";
-      boxes.append(item);
+
       item.style.backgroundColor = getRandomHexColor();
+      fragment.appendChild(item);
     }
+    boxes.appendChild(fragment);
   }
   num.value = "";
 }
